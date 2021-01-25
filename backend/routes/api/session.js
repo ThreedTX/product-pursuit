@@ -37,4 +37,21 @@ router.post(
   }),
 );
 
+/* ----- ----- */
+/* DELETE /api/session */
+/* ----- ----- ----- ----- ----- ----- ----- -----  */
+router.delete(
+  '/',
+  (_req, res) => {
+    /* Removes the token cookie from the response and returns a JSON success message */
+    res.clearCookie('token');
+    return res.json({ message: 'success' });
+  }
+  /* Remember: asyncHandler wasn't used to wrap the route handler because the route
+  handler is not async*/
+);
+
+
+
+
 module.exports = router;
