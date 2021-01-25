@@ -6,13 +6,30 @@ will wrap asynchronous route handlers and custom middlewares. */
 const { setTokenCookie, restoreUser } = require('../../utils/auth');
 const { User } = require('../../db/models');
 
+const { check } = require('express-validator');
+const { handleValidationErrors } = require('../../utils/validation');
+
 const router = express.Router();
+
+const validateLogin = [
+  /* checks to see if req.body.credential and req.body.password is not empty.
+  If one of them is empty, then an error will be returned as the response. */
+  check('credential')
+    .exists({ checkFalsy: true })
+    .notEmpty()
+    .withMessage('Please provide a valid email or username.'),
+  check('password')
+    .exists({ checkFalsy: true })
+    .withMessage('Please provide a password.'),
+  handleValidationErrors,
+];
 
 /* ----- ----- */
 /* POST /api/session */
 /* ----- ----- ----- ----- ----- ----- ----- -----  */
 router.post(
   '/',
+  validateLogin,
   asyncHandler(async (req, res, next) => {
     const { credential, password } = req.body;
 
