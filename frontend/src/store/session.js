@@ -35,6 +35,24 @@ export const restoreUser = () => async dispatch => {
   return res;
 };
 
+export const signup = (user) => async (dispatch) => {
+  /* a signup thunk action that will hit the signup backend
+  route with username, email, and password inputs */
+  const { username, email, password } = user;
+  const response = await fetch("/api/users", {
+    method: "POST",
+    body: JSON.stringify({
+      username,
+      email,
+      password,
+    }),
+  });
+  /* After the response from the AJAX call comes back, dispatch
+  the action for setting the session user to the response's data */
+  dispatch(setUser(response.data.user));
+  return response;
+};
+
 const initialState = { user: null };
 
 const sessionReducer = (state = initialState, action) => {
