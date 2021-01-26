@@ -36,7 +36,7 @@ export const restoreUser = () => async dispatch => {
 };
 
 export const signup = (user) => async (dispatch) => {
-  /* a signup thunk action that will hit the signup backend
+  /* A signup thunk action that will hit the signup backend
   route with username, email, and password inputs */
   const { username, email, password } = user;
   const response = await fetch("/api/users", {
@@ -50,6 +50,17 @@ export const signup = (user) => async (dispatch) => {
   /* After the response from the AJAX call comes back, dispatch
   the action for setting the session user to the response's data */
   dispatch(setUser(response.data.user));
+  return response;
+};
+
+export const logout = () => async (dispatch) => {
+  /* A logout thunk action that will hit the logout backend route */
+  const response = await fetch('/api/session', {
+    method: 'DELETE',
+  });
+  /*After the response from the AJAX call comes back, it will dispatch
+  the action for removing the session user to the response's data. */
+  dispatch(removeUser());
   return response;
 };
 
