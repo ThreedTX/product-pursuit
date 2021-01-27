@@ -1,0 +1,174 @@
+body{
+  font-family: 'Yusei Magic', sans-serif;
+}
+
+.divider__div {
+  display: block;
+  text-align: center;
+  float: left;
+  clear: both;
+  width: 900px;
+}
+
+.left-container {
+  /* display: flex; */
+  box-sizing: border-box;
+  width: 55%;
+  float: left;
+  font-family: 'Yusei Magic', sans-serif;
+  margin-right: 2em;
+
+}
+.right-container {
+  box-sizing: border-box;
+  float: left;
+  width: 40%;
+  /* height: 100%; */
+  border-left: black solid 1px;
+}
+
+.modal-header {
+  margin-block-start: 0em;
+}
+
+.modal-tabs-container {
+  display: flex;
+  padding-inline-start: 0em;
+  margin: 0em;
+}
+
+.modal-tabs {
+  list-style-type: none;
+  width: 50%;
+  flex-wrap: nowrap;
+  text-align:center;
+  /* margin: 1em 0em; */
+  padding: 1em 0em;
+
+}
+
+.sign-up{
+  background: #d2d8d8;
+  font-style: oblique;
+}
+
+input {
+  /* margin: 0% 5%; */
+  outline: 0;
+  width: 80%;
+  padding: .5em;
+  box-sizing:border-box;
+  /* border-width: 0 0 2px; */
+  /* border: none; */
+  /* border-bottom: mediumblue; */
+  font-size: 18pt;
+  /* background: rgb(248, 248, 248); */
+  min-width: 400px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+
+}
+input:focus + span, input:not(:placeholder-shown) + span {
+  /* opacity:1; */
+  transform: scale(1) translateY(-80%) translateX(0px);
+}
+
+input:focus {
+  /* border-bottom-width: .5em; */
+  /* border-bottom-style: solid; */
+  /* border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: solid; */
+  /* border-color: mediumblue; */
+  /* outline-color: transparent; */
+  /* outline-style: none; */
+
+}
+
+
+
+.floating-placeholder {
+  padding:10px;
+  pointer-events: none;
+  position:absolute;
+  left:40px;
+  /* top:-4px; */
+  /* right: 50px; */
+  transition: 0.2s;
+  transition-timing-function: ease;
+  /* transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); */
+  opacity:0.8;
+}
+
+
+.input-icons {
+  position: relative;
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: center;
+  margin: 2em 5%;
+  padding: 0em .5em;
+  /* background: rgb(248, 248, 248); */
+  min-width: 400px;
+  width: 90%;
+  white-space: nowrap;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: solid;
+}
+
+.input-icons:focus-within {
+  border-color: steelblue;
+}
+
+form .input-icons:first-child {
+  margin: none;
+  background-color: mediumorchid;
+}
+
+.input-icons__container {
+  width: 16px;
+}
+
+.fas {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.log-in__button{
+  width: 25%;
+  /* border: none; */
+  padding: .5em 0em;
+  background-color: rgb(255, 255, 255);
+  border-radius: .5em;
+  border-color: steelblue;
+  border-style: solid;
+  font-weight: bold;
+  color: steelblue;
+  font-family: 'Yusei Magic', sans-serif;
+}
+
+.log-in__button:hover {
+  background-color: steelblue;
+  color: rgb(255, 255, 255);
+}
+
+.right-container-content__div {
+  height: 100%;
+  width: 100%;
+
+}
+
+.logo{
+  width: 200px;
+  height: 124px;
+}
