@@ -18,7 +18,10 @@
 // };
 
 /* ------ SELECTORS ------ */
-
+/* We also know we are making fetch call so good idea to make function async */
+export const getProducts = () => async (dispatch) => {
+  const res = await fetch('/api/products');
+};
 // export const getAllProducts = (state) => Object.values(state.product);
 
 // export const getProducts = () => async (dispatch) => {

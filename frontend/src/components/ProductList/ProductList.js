@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink, Route, useParams } from 'react-router-dom';
-import productReducer from "../../store/product"; /** */
+import { getProducts } from "../../store/product"; /** */
 import './ProductList.css';
 
 function ProductList() {
@@ -14,9 +14,9 @@ function ProductList() {
 
 
   /** */
-  // useEffect(() => {
-  //   dispatch(productReducer());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(getProducts());
+  }, [dispatch]);
 
 
   let key = 0;
