@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from 'react-router-dom';
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
 import "./LoginForm.css";
@@ -19,11 +20,11 @@ function LoginForm() {
       }
     );
   };
-
+  let num = 0;
   return (
     <div className="divider__div">
       <h1>Log In to Product Pursuit</h1>
-      <p>Need an account?<a> Sign Up</a></p>
+      <p>Need an account? <NavLink key={num++} to={`/signup`}>Sign Up</NavLink></p>
       <div className="left-container">
         <form className="log-in__form" onSubmit={handleSubmit}>
           <ul>
@@ -33,7 +34,7 @@ function LoginForm() {
           </ul>
           <div className="input-icons">
             <div className="input-icons__container">
-              <i class="fas fa-user"></i>
+              <i className="fas fa-user"></i>
             </div>
             <input
               type="text"

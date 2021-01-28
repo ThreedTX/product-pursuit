@@ -20,7 +20,7 @@ function ProductList() {
 
 
   let key = 0;
-  console.log(products);
+
   return (
     <div>
       <ul>
