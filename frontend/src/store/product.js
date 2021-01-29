@@ -1,7 +1,20 @@
 // const POPULATE = 'product/POPULATE';
 // const TOGGLE_LIKE = 'product/TOGGLE_LIKE';
 
+//ActionType
+// a string that has my reducer name/SET_PRODUCTS
+//IF ERROR DOUBLE CHECK HERE MIGHT BE products/
+const SET_PRODUCTS = 'products/SET_PRODUCTS';
+
 /* ----- ACTIONS ------ */
+//An action creator is a function that then returns a POJO.
+/* setProducts is intaking products so that's what we want our paylaod to be. */
+
+//Instead of => { return {  } } just return the object
+const setProducts = (payload) => ({
+  type: SET_PRODUCTS,
+  payload,
+})
 
 // export const populateProducts = () => {
 //   return {
@@ -21,6 +34,13 @@
 /* We also know we are making fetch call so good idea to make function async */
 export const getProducts = () => async (dispatch) => {
   const res = await fetch('/api/products');
+
+  if (res.ok) {
+    //This ends up being the payload
+    const products = await res.json();
+
+    dispatch(setProducts(products));
+  }
 };
 // export const getAllProducts = (state) => Object.values(state.product);
 
@@ -44,10 +64,19 @@ const initState = {
   },
 };
 
+
+
 export default function productReducer(state = initState, action) {
+  //the state spread into an Object
   const newState = Object.assign({}, state);
+  //const newState = { ...state }; is equivalent
   switch (action.type) {
-    // case POPULATE:
+    case SET_PRODUCTS:
+      for (let product of action.payload) {
+        newState[product.id] = product;
+      }
+      return newState;
+
     //   action.product.forEach(product => {
     //     newState[product.id] = product;
     //   });
