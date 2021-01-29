@@ -4,11 +4,11 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
 
     return queryInterface.bulkInsert('Products', [
-      { name: 'Soundsgood', description: 'Sell audio directly to listeners with secure mobile delivery', userId: 1, imgUrl: '', createdAt: new Date(), updatedAt: new Date() },
-      { name: 'Lens-ane', description: 'Convert images on the fly', userId: 3, imgUrl: '', createdAt: new Date(), updatedAt: new Date() },
-      { name: 'Litebulb', description: 'An idea center, for your next project', userId: 2, imgUrl: '', createdAt: new Date(), updatedAt: new Date() },
-      { name: 'Selfmade', description: 'Do it yourself selfie customization tool', userId: 1, imgUrl: '', createdAt: new Date(), updatedAt: new Date() },
-      { name: 'Paste Perfect', description: 'Universal pasteboard', userId: 2, imgUrl: '', createdAt: new Date(), updatedAt: new Date() },
+      { userId: 1, name: 'Soundsgood', description: 'Sell audio directly to listeners with secure mobile delivery', imgUrl: '', createdAt: new Date(), updatedAt: new Date() },
+      { userId: 3, name: 'Lens-ane', description: 'Convert images on the fly', imgUrl: '', createdAt: new Date(), updatedAt: new Date() },
+      { userId: 2, name: 'Litebulb', description: 'An idea center, for your next project', imgUrl: '', createdAt: new Date(), updatedAt: new Date() },
+      { userId: 1, name: 'Selfmade', description: 'Do it yourself selfie customization tool', imgUrl: '', createdAt: new Date(), updatedAt: new Date() },
+      { userId: 2, name: 'Paste Perfect', description: 'Universal pasteboard', imgUrl: '', createdAt: new Date(), updatedAt: new Date() },
     ], {});
   },
 
