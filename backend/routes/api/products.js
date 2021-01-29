@@ -9,4 +9,10 @@ router.get('/', asyncHandler(async (req, res) => {
 })
 );
 
+router.get('/:productId', asyncHandler(async (req, res) => {
+  const product = await Product.findByPk(req.params.id);;
+  res.json(product);
+})
+);
+
 module.exports = router;

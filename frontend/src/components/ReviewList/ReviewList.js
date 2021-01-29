@@ -9,7 +9,7 @@ function ReviewList() {
 
 
 
-  const { userId } = useParams();
+  const { productId } = useParams();
   const userId = Number.parseInt((useParams().userId));
   console.log(userId);
 
@@ -33,9 +33,6 @@ function ReviewList() {
           </li>
         ))}
       </ul>
-      <Route path='/products/:productId'>
-
-      </Route>
     </div>
   );
 }

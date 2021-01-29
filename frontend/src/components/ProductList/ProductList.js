@@ -7,9 +7,9 @@ import './ProductList.css';
 function ProductList() {
   const dispatch = useDispatch();
 
-  const productId = Number.parseInt(useParams().productId);
-  const product = useSelector(state => state.product[productId]);
-  console.log(productId);
+  // const productId = Number.parseInt(useParams().productId);
+  // const product = useSelector(state => state.product[productId]);
+  // console.log(productId);
 
   const products = useSelector((state) => Object.values(state.product));
   // const products2323 = useSelector(state => {

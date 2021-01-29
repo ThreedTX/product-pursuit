@@ -1,5 +1,10 @@
 
+const SET_REVIEWS = 'reviews/SET_REVIEWS';
 
+const setReviews = (payload) => ({
+  type: SET_REVIEWS,
+  payload,
+});
 
 
 
@@ -25,10 +30,25 @@ const initState = {
 }
 
 
+export const getReviews = () => async (dispatch) => {
+  const res = await fetch('/api/reviews');
+
+  if (res.ok) {
+    //This ends up being the payload
+    const reviews = await res.json();
+
+    dispatch(setReviews(reviews));
+  }
+};
+
 const reviewReducer = (state = initState, action) => {
   // eslint-disable-next-line no-unused-vars
   const newState = Object.assign({}, state);
   switch (action.type) {
+    case SET_REVIEWS:
+      for (let review of action.payload) {
+        newState[review.id] = review;
+      }
     default:
       return state;
   }

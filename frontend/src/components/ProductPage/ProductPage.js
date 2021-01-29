@@ -25,16 +25,16 @@ function ProductPage() {
     <div>
       <ul>
         <li key={key++}>
-          Product Id{product.id}
+          Product Id: {product.id}
         </li>
         <li>
-          User Id{product.userId}
+          User Id: {product.userId}
         </li>
         <li>
-          Name {product.name}
+          Name: {product.name}
         </li>
         <li>
-          Description{product.description}
+          Description:{product.description}
         </li>
         <li>
           Created At: {product.createdAt}
