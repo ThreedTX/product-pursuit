@@ -6,12 +6,16 @@ import thunk from "redux-thunk";
 
 //Reducers
 import sessionReducer from './session';
-import productReducer from './product';
+import productReducer from './products';
+import reviewReducer from './review';
+import productPageReducer from "./productPage";
 
 //Combines into one reducer
 const rootReducer = combineReducers({
   session: sessionReducer,
   product: productReducer,
+  review: reviewReducer,
+  productPage: productPageReducer,
 });
 
 let enhancer;

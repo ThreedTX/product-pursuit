@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink, Route, useParams } from 'react-router-dom';
-import { getProducts } from "../../store/product"; /** */
+import { getProducts } from "../../store/products"; /** */
 import './ProductList.css';
 
 function ProductList() {
   const dispatch = useDispatch();
+
+  const productId = Number.parseInt(useParams().productId);
+  const product = useSelector(state => state.product[productId]);
+  console.log(productId);
 
   const products = useSelector((state) => Object.values(state.product));
   // const products2323 = useSelector(state => {
@@ -30,9 +34,6 @@ function ProductList() {
           </li>
         ))}
       </ul>
-      <Route path='/products/:productId'>
-
-      </Route>
     </div>
   );
 }
