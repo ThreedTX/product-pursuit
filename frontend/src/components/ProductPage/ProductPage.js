@@ -1,22 +1,26 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useParams } from 'react-router-dom';
+import { useEffect } from 'react';
 import ReviewList from '../ReviewList';
+import { getProducts } from "../../store/products";
 
 import './ProductPage.css';
 
 function ProductPage() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const productId = Number.parseInt(useParams().productId);
 
   const product = useSelector(state => state.product[productId]);
-  console.log(product);
+  const creator = useSelector((state) => state.users[product.userId]);
+  console.log(creator)
+  // console.log(product);
 
 
   /** */
-  // useEffect(() => {
-  //   dispatch(getProducts());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(getProducts());
+  }, [dispatch]);
 
 
   let key = 0;
@@ -28,7 +32,7 @@ function ProductPage() {
           Product Id: {product.id}
         </li>
         <li>
-          User Id: {product.userId}
+          Creator: {creator.username}
         </li>
         <li>
           Name: {product.name}

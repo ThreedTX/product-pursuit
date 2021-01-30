@@ -13,7 +13,7 @@ function Review({ review, product }) {
   const productId = product.id;
   const userId = review.userId;
   // const userId = Number.parseInt((useParams().review.userId));
-  console.log(userId);
+  // console.log(userId);
   // console.log(review);
 
   //we want to change this to be review by productId num

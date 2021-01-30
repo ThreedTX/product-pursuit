@@ -6,6 +6,7 @@ import ProductList from "./components/ProductList";
 import ProductPage from './components/ProductPage';
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
+import ProfilePage from "./components/ProfilePage/ProfilePage";
 
 function App() {
   const dispatch = useDispatch();
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <Route path='/products/:productId'>
               <ProductPage />
+            </Route>
+            <Route>
+              <ProfilePage path='/users/:userId' />
             </Route>
           </Switch>
         </>
