@@ -33,6 +33,25 @@ const validateSignup = [
 /*If at least one of them fails the check, then an error
 will be returned as the response. */
 
+
+/* ----- ----- */
+/* GET /api/users */
+/* ----- ----- ----- ----- ----- ----- ----- -----  */
+router.get('/', asyncHandler(async (req, res) => {
+  const users = await User.findAll();
+  res.json(users);
+})
+);
+
+/* ----- ----- */
+/* GET /api/users/:userId */
+/* ----- ----- ----- ----- ----- ----- ----- -----  */
+router.get('/:userId', asyncHandler(async (req, res) => {
+  const user = await User.findByPk(req.params.id);
+  res.json(user);
+})
+);
+
 /* ----- ----- */
 /* POST /api/users */
 /* ----- ----- ----- ----- ----- ----- ----- -----  */

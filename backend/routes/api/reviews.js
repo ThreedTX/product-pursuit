@@ -4,7 +4,7 @@ const { Review } = require('../../db/models/');
 
 
 router.get('/', asyncHandler(async (req, res) => {
-  const reviews = await Reviews.findAll();
+  const reviews = await Review.findAll();
   res.json(reviews);
 })
 );

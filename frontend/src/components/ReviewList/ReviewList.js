@@ -2,24 +2,35 @@ import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink, Route, useParams } from 'react-router-dom';
 import { getReviews } from "../../store/review"; /** */
+import Review from '../Review';
 import './ReviewList.css';
 
-function ReviewList() {
+function ReviewList({ product }) {
   const dispatch = useDispatch();
 
 
 
-  const { productId } = useParams();
-  const userId = Number.parseInt((useParams().userId));
-  console.log(userId);
+  const productId = product.id;
 
-  const reviews = useSelector((state) => Object.values(state.review));
+
+
+
+
+  //we want to change this to be review by productId num
+  const reviews = useSelector(({ review }) =>
+    Object.values(review).filter(
+      (review) => review.productId === productId
+    ));
 
 
   /** */
   useEffect(() => {
     dispatch(getReviews());
   }, [dispatch]);
+
+  // useEffect(() => {
+  //   dispatch(loadReviewsForProduct(productId));
+  // }, [dispatch, productId]);
 
 
   let key = 0;
@@ -28,8 +39,8 @@ function ReviewList() {
     <div>
       <ul>
         {reviews.map(review => (
-          <li key={review.id} id={review.id}>
-            <NavLink to={`/users/${review.userId}`}>userId.name</NavLink>
+          <li key={key++} id={review.id}>
+            <Review review={review} product={product} />
           </li>
         ))}
       </ul>

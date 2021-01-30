@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { NavLink, useParams } from 'react-router-dom';
-// import ReviewList from '../ReviewList';
+import ReviewList from '../ReviewList';
 
 import './ProductPage.css';
 
@@ -41,7 +41,7 @@ function ProductPage() {
         </li>
       </ul>
       <div>
-        {/* <ReviewList /> */}
+        <ReviewList product={product} />
       </div>
     </div>
   );
