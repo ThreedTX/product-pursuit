@@ -14,6 +14,28 @@
   padding: 14px 16px;
 }
 
+.Navigation-searchBar {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* display:block; */
+  padding: 7px 8px;
+  margin: 9.5px 0 0 0 ;
+  /* text-align: center; */
+  width: 250px;
+  /* background-color: violet; */
+  resize: vertical;
+  overflow: auto;
+}
+
+.Navigation-searchBar__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* resize: vertical; */
+  overflow: auto;
+}
+
 .Navigation-links:hover{
   background-color:rgb(210, 210, 210);
 }

@@ -41,6 +41,7 @@ function LoginForm() {
               placeholder=" "
               value={credential}
               onChange={(e) => setCredential(e.target.value)}
+              className="log-in__input"
               required
             />
             <span class="floating-placeholder">Username or Email</span>
@@ -54,6 +55,7 @@ function LoginForm() {
               placeholder=" "
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              className="log-in__input"
               required
             />
             <span class="floating-placeholder"> Password</span>
