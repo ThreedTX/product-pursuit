@@ -7,14 +7,17 @@ function SearchBar() {
   const [search, setSearch] = useState("");
 
   return (
-    <input
-      onClick={() => setShowModal(true)}
-      type="search"
-      placeholder="Discover your next favorite thing..."
-      value={search}
-      onChange={(e) => setSearch(e.target.value)}
-      className="Navigation-searchBar"
-    />
+    <>
+      <input
+        onClick={() => setShowModal(true)}
+        type="search"
+        placeholder="Discover your next favorite thing..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        className="Navigation-searchBar"
+      />
+      <i class="fas fa-search Navigation-searchBar__icon"></i>
+    </>
   )
 }
 

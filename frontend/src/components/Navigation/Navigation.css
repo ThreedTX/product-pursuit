@@ -34,6 +34,16 @@
   justify-content: center;
   /* resize: vertical; */
   overflow: auto;
+  white-space: nowrap;
+}
+
+.Navigation-searchBar__icon{
+  /* display: flex; */
+  position: absolute;
+  text-align: center;
+  left: 298px;
+  top: 19px;
+  color:  lightslategray;
 }
 
 .Navigation-links:hover{
