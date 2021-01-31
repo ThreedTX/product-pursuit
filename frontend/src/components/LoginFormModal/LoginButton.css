@@ -6,4 +6,17 @@
   color: lightslategray;
   padding: 14px 16px;
   font-family: 'Yusei Magic', sans-serif;
+  background-color: rgb(233, 233, 233);
+  font-size: 16px;
+  transition: none;
+}
+
+.Navigation-button:focus {
+  outline: none;
+  outline-offset: -4px;
+  background-color:rgb(210, 210, 210);
+}
+
+.Navigation-button:hover{
+  background-color:rgb(210, 210, 210);
 }

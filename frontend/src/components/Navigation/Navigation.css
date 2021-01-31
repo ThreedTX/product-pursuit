@@ -1,5 +1,5 @@
 .Navigation-wrapper {
-  background-color: whitesmoke;
+  background-color: rgb(233, 233, 233);
   list-style-type: none;
   margin: 0;
   overflow: hidden;
@@ -12,6 +12,10 @@
   text-decoration: none;
   text-align: center;
   padding: 14px 16px;
+}
+
+.Navigation-links:hover{
+  background-color:rgb(210, 210, 210);
 }
 
 

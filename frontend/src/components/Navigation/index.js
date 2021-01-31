@@ -31,7 +31,7 @@ function Navigation({ isLoaded }) {
 
   return (
     <ul className="Navigation-wrapper">
-      <li className="Navigation-links">
+      <li className="float-left">
         <NavLink exact to="/" className="Navigation-links">Home</NavLink>
       </li>
       {isLoaded && sessionLinks}
