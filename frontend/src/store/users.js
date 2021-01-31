@@ -1,10 +1,15 @@
 const SET_USERS = 'users/SET_USERS';
+// const SET_USER = 'users/SET_USER';
 
 const setUsers = (payload) => ({
   type: SET_USERS,
   payload,
 });
 
+// const setUser = (payload) => ({
+//   type: SET_USER,
+//   payload,
+// });
 
 const initState = {
   1: {
@@ -29,6 +34,16 @@ export const getUsers = () => async (dispatch) => {
   }
 };
 
+// export const getUser = () => async (dispatch) => {
+//   const res = await fetch('/api/users/:userId');
+
+//   if (res.ok) {
+//     //This ends up being the payload
+//     const user = await res.json();
+
+//     dispatch(setUser(user));
+//   }
+// };
 
 
 const userReducer = (state = initState, action) => {
@@ -41,6 +56,12 @@ const userReducer = (state = initState, action) => {
       }
       return newState;
     }
+    // case SET_USER: {
+    //   newState[action.payload.user.id] = action.paylaod.user;
+
+    //   return newState;
+
+    // }
     default:
       return state;
   }

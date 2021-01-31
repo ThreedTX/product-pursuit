@@ -30,8 +30,8 @@ function App() {
             <Route path='/products/:productId'>
               <ProductPage />
             </Route>
-            <Route>
-              <ProfilePage path='/users/:userId' />
+            <Route path='/users/:userId'>
+              <ProfilePage />
             </Route>
           </Switch>
         </>

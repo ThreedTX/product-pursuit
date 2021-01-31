@@ -1,8 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import ReviewList from '../ReviewList';
 import { getProducts } from "../../store/products";
+import { getUsers } from "../../store/users";
+// import * as sessionActions from "../../store/session";
 
 import './ProductPage.css';
 
@@ -12,14 +14,18 @@ function ProductPage() {
   const productId = Number.parseInt(useParams().productId);
 
   const product = useSelector(state => state.product[productId]);
-  const creator = useSelector((state) => state.users[product.userId]);
-  console.log(creator)
-  // console.log(product);
+  const productCreator = useSelector(({ users }) =>
+    Object.values(users).filter(
+      (user) => user.id === product.userId
+    )
+  );
 
 
   /** */
   useEffect(() => {
+    // dispatch(sessionActions.restoreUser());
     dispatch(getProducts());
+    dispatch(getUsers());
   }, [dispatch]);
 
 
@@ -32,7 +38,7 @@ function ProductPage() {
           Product Id: {product.id}
         </li>
         <li>
-          Creator: {creator.username}
+          Creator: {productCreator.length ? productCreator[0].username : product.userId}
         </li>
         <li>
           Name: {product.name}
