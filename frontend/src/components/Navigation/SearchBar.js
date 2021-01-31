@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Modal } from '../../context/Modal'
+import { SearchModal } from '../../context/Modal'
+import SearchModalComponent from './SearchModalComponent';
 import './Navigation.css';
 
 function SearchBar() {
@@ -16,7 +17,12 @@ function SearchBar() {
         onChange={(e) => setSearch(e.target.value)}
         className="Navigation-searchBar"
       />
-      <i class="fas fa-search Navigation-searchBar__icon"></i>
+      <i className="fas fa-search Navigation-searchBar__icon"></i>
+      {showModal && (
+        <SearchModal onClose={() => setShowModal(false)}>
+          <SearchModalComponent />
+        </SearchModal>
+      )}
     </>
   )
 }

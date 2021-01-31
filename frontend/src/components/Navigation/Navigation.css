@@ -20,12 +20,15 @@
   justify-content: center;
   /* display:block; */
   padding: 7px 8px;
-  margin: 9.5px 0 0 0 ;
+  margin: 7.5px 0 0 0 ;
   /* text-align: center; */
-  width: 250px;
+  width: 270px;
   /* background-color: violet; */
   resize: vertical;
   overflow: auto;
+  font-family: 'Yusei Magic', sans-serif;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .Navigation-searchBar__container{
@@ -41,7 +44,7 @@
   /* display: flex; */
   position: absolute;
   text-align: center;
-  left: 298px;
+  left: 325px;
   top: 19px;
   color:  lightslategray;
 }
@@ -66,4 +69,49 @@
 
 .float-left {
   float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Navigation-searchBarModal {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* display:block; */
+  padding: 7px 8px;
+  margin: 7.5px 0 0 0 ;
+  /* text-align: center; */
+  width: 98%;
+  /* background-color: violet; */
+  resize: vertical;
+  overflow: auto;
+  font-family: 'Yusei Magic', sans-serif;
+  margin-left: 10px;
+  /* background-color: green; */
+}
+
+.Navigation-searchBarModal__icon{
+  /* display: flex; */
+  position: absolute;
+  text-align: center;
+  left: 325px;
+  top: 19px;
+  color:  lightslategray;
 }
