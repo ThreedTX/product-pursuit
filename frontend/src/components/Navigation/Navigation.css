@@ -1,0 +1,33 @@
+.Navigation-wrapper {
+  background-color: whitesmoke;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.Navigation-links {
+  display: block;
+  color: lightslategray;
+  text-decoration: none;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+
+.Navigation-button {
+  display: block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  color: lightslategray;
+}
+
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}

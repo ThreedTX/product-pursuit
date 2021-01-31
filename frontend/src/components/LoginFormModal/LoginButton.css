@@ -1,0 +1,9 @@
+.Navigation-button {
+  display: block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  color: lightslategray;
+  padding: 14px 16px;
+  font-family: 'Yusei Magic', sans-serif;
+}
