@@ -20,7 +20,7 @@ function SearchBar() {
       <i className="fas fa-search Navigation-searchBar__icon"></i>
       {showModal && (
         <SearchModal onClose={() => setShowModal(false)}>
-          <SearchModalComponent />
+          <SearchModalComponent setShowModal={setShowModal} />
         </SearchModal>
       )}
     </>

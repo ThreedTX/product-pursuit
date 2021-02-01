@@ -1,0 +1,57 @@
+.searchBarModal {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* display:block; */
+  padding: 7px 8px;
+  margin: 7.5px 0 0 0 ;
+  /* text-align: center; */
+  width: 98%;
+  /* background-color: violet; */
+  resize: vertical;
+  overflow: auto;
+  font-family: 'Yusei Magic', sans-serif;
+  margin-left: 10px;
+  /* background-color: green; */
+}
+
+.searchBarModal__icon{
+  /* display: flex; */
+  position: absolute;
+  text-align: center;
+  left: 325px;
+  top: 19px;
+  color:  lightslategray;
+}
+
+/*
+
+----- Search Bar Modal Content -----
+
+*/
+
+.searchBarModal-matches{
+  list-style-type: none;
+  height: 80px;
+}
+
+.searchBarModal-content__container {
+  height: 100%;
+  font-size: 12px;
+}
+
+.searchBarModal-content__container:hover {
+  background-color:rgb(233, 233, 233);
+}
+
+/* .searchBarModal-content {
+
+} */
+
+.logo_30x30 {
+  padding: 25px 10px 0px 10px;
+}
+
+.float-left{
+  float: left;
+}
