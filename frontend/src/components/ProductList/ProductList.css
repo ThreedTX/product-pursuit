@@ -22,6 +22,13 @@
   margin-top: 20px;
   /* padding-top: 1px; */
 }
+
+.products-list_NavLink{
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
 .products-list {
   list-style-type: none;
   border-bottom: 1px solid rgb(225, 225, 225);
@@ -37,7 +44,9 @@
 .products-list__title{
   margin-top: 0;
   margin-bottom: 0px;
-  padding: 10px 0px 0px 40px;
+  padding: 10px 0px 15px 40px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
 }
 
 .products-list__description {
@@ -99,7 +108,7 @@
   .products-list__title {
     margin: 0 auto;
     max-width: 720px;
-    padding: 10px 0px 0px 40px;
+    padding: 10px 0px 15px 40px;
     box-sizing: border-box;
   }
 }

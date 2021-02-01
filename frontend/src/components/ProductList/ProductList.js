@@ -31,7 +31,7 @@ function ProductList() {
             <div className="products-list__content-container">
               <img className="logo_80x80 float-left" src={logo_80x80} />
               <div className="float-left products-list__content">
-                <NavLink key={product.id} id={product.id} to={`/products/${product.id}`}>{product.name}</NavLink>
+                <NavLink key={product.id} id={product.id} to={`/products/${product.id}`} className="products-list_NavLink" >{product.name}</NavLink>
                 <p className="products-list__description">{product.description}</p>
                 <div className="products-list__comment">
                   <i class="fas fa-comment"><p className="prodcuts-list__comment--count">{rng}</p></i>
@@ -41,7 +41,7 @@ function ProductList() {
           </li>
         ))}
       </ul>
-    </div>
+    </div >
   );
 }
 
