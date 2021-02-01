@@ -43,6 +43,10 @@
 .products-list__description {
   margin-top: 3px;
   font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 400px;
 }
 
 .products-list__comment {
@@ -78,4 +82,24 @@
 
 .float-left{
   float: left;
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+  .products-list {
+    max-width: 720px;
+    list-style-type: none;
+    border-bottom: 1px solid rgb(225, 225, 225);
+    background-color:white;
+    margin: 0 auto;
+    height: 120px;
+  }
+
+  .products-list__title {
+    margin: 0 auto;
+    max-width: 720px;
+    padding: 10px 0px 0px 40px;
+    box-sizing: border-box;
+  }
 }

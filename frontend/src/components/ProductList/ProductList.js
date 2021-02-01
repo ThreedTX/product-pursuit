@@ -24,8 +24,8 @@ function ProductList() {
 
   return (
     <div className="products-list__container">
-      <p className="products-list__title">Products</p>
       <ul className="products-list__li-container">
+        <p className="products-list__title">Products</p>
         {products.map(product => (
           <li key={key++} className="products-list">
             <div className="products-list__content-container">
