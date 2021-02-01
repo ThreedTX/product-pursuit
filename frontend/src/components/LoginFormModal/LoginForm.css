@@ -144,9 +144,13 @@ form .input-icons:first-child {
 }
 
 
-.log-in__button{
+.log-in__button,
+.demo-user__button
+{
   width: 25%;
-  /* border: none; */
+  min-width: 119.75px;
+  float:left;
+
   padding: .5em 0em;
   background-color: rgb(255, 255, 255);
   border-radius: .5em;
@@ -157,9 +161,33 @@ form .input-icons:first-child {
   font-family: 'Yusei Magic', sans-serif;
 }
 
+.log-in__button {
+  border-color: steelblue;
+  color: steelblue;
+  margin-right: 5px;
+}
+
+
 .log-in__button:hover {
   background-color: steelblue;
   color: rgb(255, 255, 255);
+}
+
+.demo-user__button{
+  color: darkblue;
+  border-color: darkblue;
+  margin-left: 5px;
+}
+
+.demo-user__button:hover{
+  background-color: darkblue;
+  color: rgb(255, 255, 255)
+}
+
+.buttons__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .right-container-content__div {

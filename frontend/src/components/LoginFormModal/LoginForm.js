@@ -61,8 +61,10 @@ function LoginForm() {
             />
             <span class="floating-placeholder"> Password</span>
           </div>
-          <button className="log-in__button" type="submit">Log In</button>
-          <DemoUserButton />
+          <div className="buttons__container">
+            <button className="log-in__button" type="submit">Log In</button>
+            <DemoUserButton />
+          </div>
         </form>
       </div >
       <div className="right-container">
