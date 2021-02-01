@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
 import "./LoginForm.css";
+import DemoUserButton from "./DemoUserButton";
 import logo from './images/website_logo_transparent_background.png';
 
 function LoginForm() {
@@ -61,6 +62,7 @@ function LoginForm() {
             <span class="floating-placeholder"> Password</span>
           </div>
           <button className="log-in__button" type="submit">Log In</button>
+          <DemoUserButton />
         </form>
       </div >
       <div className="right-container">
