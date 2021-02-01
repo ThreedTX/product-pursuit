@@ -39,15 +39,14 @@ function SearchModalComponent({ setShowModal }) {
       productMatches = [];
       userMatches = [];
     }
-    console.log("PRODUCT MATCHES: ", productMatches);
-    console.log("USER MATCHES: ", userMatches);
+
 
     // const newState = Object.assign({}, state);
     // let matches = Object.assign(products, users);
 
 
     setMatches(productMatches);
-    console.log(matches)
+
 
 
   };
@@ -58,12 +57,6 @@ function SearchModalComponent({ setShowModal }) {
     }
   }
 
-  const closeModal = () => {
-    setTimeout(() => {
-      setShowModal(false);
-
-    }, 2000);
-  };
 
   useEffect(() => {
     dispatch(getProducts());

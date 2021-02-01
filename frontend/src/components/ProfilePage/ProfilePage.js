@@ -7,22 +7,22 @@ import './ProfilePage.css'
 
 function ProfilePage() {
   const dispatch = useDispatch();
-  // const userId = user.id;
+
 
   const userId = Number.parseInt(useParams().userId);
-  console.log(userId);
-  // const selectUserById = (state, userId) => state.users.find(user => user.id === userId)
+
+
 
   const user = useSelector(({ users }) =>
     Object.values(users).filter(
       (user) => user.id === userId
     )
   );
-  console.log(user, " USER ");
 
 
-  // const user = useSelector((state) => state.users);
-  // console.log(selectUserById);
+
+
+
 
   useEffect(() => {
     dispatch(getUsers());
