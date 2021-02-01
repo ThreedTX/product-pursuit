@@ -19,7 +19,7 @@
   /* display: flex; */
   position: absolute;
   text-align: center;
-  left: 325px;
+  left: 955px;
   top: 19px;
   color:  lightslategray;
 }
@@ -54,4 +54,8 @@
 
 .float-left{
   float: left;
+}
+
+.placeholder-text {
+  padding-left: 15px;
 }

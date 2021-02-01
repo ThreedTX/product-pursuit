@@ -83,7 +83,7 @@ function SearchModalComponent({ setShowModal }) {
           onChange={(e) => { searchProductsAndUsers(e.target.value); setSearch(e.target.value) }}
           className="searchBarModal"
         />
-        <i className="fas fa-search searchBarModal__icon"></i>
+        {/* <i className="fas fa-search searchBarModal__icon"></i> */}
       </div>
       <div >
 
@@ -101,7 +101,7 @@ function SearchModalComponent({ setShowModal }) {
               </div>
             </li>
           ))}
-          {!matches && <p></p>}
+          {!matches && <p className="placeholder-text">Placeholder for now.</p>}
         </div>
       </div>
     </>
